@@ -1,0 +1,11 @@
+<div *ngFor = 'let user of userList'>
+    <ul>
+        <li *ngIf = 'user.age > 27' >
+            <span>{{user.name}},</span>
+            <span>{{user.age}},</span>
+            <span style="color:red">{{user.company}},</span>
+            <span>{{user.profession}},</span>
+            <span>{{user.role}}</span>
+        </li>
+    </ul>
+</div>  

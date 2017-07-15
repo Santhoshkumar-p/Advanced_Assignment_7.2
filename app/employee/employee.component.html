@@ -1,0 +1,14 @@
+<div *ngFor = 'let emp of empList; let index=index;'
+     [class.odd]='index%2==1' [class.even]='index%2==0'
+     [class.selected]='emp === selectedEmployee'
+     (click)='onSelect(emp)'>
+    <ul>
+        <li>
+        <span class='badge'>{{emp.name}},</span>
+        <span>{{emp.companyName}}, </span>
+        <span>{{emp.designation}}</span>
+        </li>
+    </ul>
+</div>
+
+<my-emp-detail [employee]="selectedEmployee"></my-emp-detail>  
